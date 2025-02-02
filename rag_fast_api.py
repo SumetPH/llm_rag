@@ -37,7 +37,7 @@ docs = UnstructuredLoader(
     max_characters=5000,
 ).load()
 
-embeddings = HuggingFaceEmbeddings(model_name="intfloat/multilingual-e5-small")
+embeddings = HuggingFaceEmbeddings(model_name="intfloat/multilingual-e5-base")
 
 def custom_tokenizer(text):
     return " ".join(word_tokenize(text, engine="newmm"))
